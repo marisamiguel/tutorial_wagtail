@@ -10,10 +10,13 @@
 
     <div class="intro">{{ page.introduccion|richtext }}</div>
 
-    {% for post in page.get_children %}
+    {% for post in blogpages %}
         <h2><a href="{% pageurl post %}">{{ post.title }}</a></h2>
         {{ post.specific.intro }}
-        {{ post.specific.body|richtext }}
+        {% comment %}
+        Quito el body para que no salga
+        en índice
+        {% endcomment %}
     {% empty %}
     <p>No hay posts todavía ... </p>
     {% endfor %}
