@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-blogpage{% endblock %}
 
@@ -13,6 +13,15 @@
 
     {{ page.body|richtext }}
 
+    <div class="row">
+    {% for item in page.gallery_images.all %}
+    <div class="col-md-3">
+        {% image item.image fill-320x240 %}
+        <p>{{ item.caption }}</p>
+    </div>
+    {% endfor %}
+    </div>
+    
     <p><a href="{{ page.get_parent.url }}">Volver al blog</a></p>
 </div>
 {% endblock %}
