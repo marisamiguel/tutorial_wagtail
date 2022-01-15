@@ -1,98 +1,22 @@
 [
 {
-  "model": "wagtailsearch.sqliteftsindexentry",
+  "model": "blog.blogpagegalleryimage",
   "pk": 1,
   "fields": {
-    "autocomplete": "Home",
-    "title": "Home",
-    "body": ""
+    "sort_order": 0,
+    "page": 5,
+    "image": 2,
+    "caption": ""
   }
 },
 {
-  "model": "wagtailsearch.sqliteftsindexentry",
+  "model": "blog.blogpagegalleryimage",
   "pk": 2,
   "fields": {
-    "autocomplete": "Blog de clase",
-    "title": "Blog de clase",
-    "body": ""
-  }
-},
-{
-  "model": "wagtailsearch.sqliteftsindexentry",
-  "pk": 3,
-  "fields": {
-    "autocomplete": "logoies",
-    "title": "logoies",
-    "body": ""
-  }
-},
-{
-  "model": "wagtailsearch.sqliteftsindexentry",
-  "pk": 4,
-  "fields": {
-    "autocomplete": "Primer post",
-    "title": "Primer post",
-    "body": "Introducción a wagtail Wagtail es un CMS Características ..."
-  }
-},
-{
-  "model": "wagtailsearch.indexentry",
-  "pk": 1,
-  "fields": {
-    "content_type": [
-      "home",
-      "homepage"
-    ],
-    "object_id": "3",
-    "title_norm": 2.125,
-    "autocomplete": "Home",
-    "title": "Home",
-    "body": ""
-  }
-},
-{
-  "model": "wagtailsearch.indexentry",
-  "pk": 2,
-  "fields": {
-    "content_type": [
-      "blog",
-      "blogindexpage"
-    ],
-    "object_id": "4",
-    "title_norm": 0.6538461538461539,
-    "autocomplete": "Blog de clase",
-    "title": "Blog de clase",
-    "body": ""
-  }
-},
-{
-  "model": "wagtailsearch.indexentry",
-  "pk": 3,
-  "fields": {
-    "content_type": [
-      "wagtailimages",
-      "image"
-    ],
-    "object_id": "1",
-    "title_norm": 1.1428571428571428,
-    "autocomplete": "logoies",
-    "title": "logoies",
-    "body": ""
-  }
-},
-{
-  "model": "wagtailsearch.indexentry",
-  "pk": 4,
-  "fields": {
-    "content_type": [
-      "blog",
-      "blogpage"
-    ],
-    "object_id": "5",
-    "title_norm": 0.7954545454545454,
-    "autocomplete": "Primer post",
-    "title": "Primer post",
-    "body": "Introducción a wagtail Wagtail es un CMS Características ..."
+    "sort_order": 1,
+    "page": 5,
+    "image": 1,
+    "caption": "Logo cpilosenlaces"
   }
 },
 {
@@ -157,6 +81,26 @@
   "fields": {
     "name": "Moderators approval",
     "active": true
+  }
+},
+{
+  "model": "taggit.tag",
+  "pk": 1,
+  "fields": {
+    "name": "foto cpi",
+    "slug": "foto-cpi"
+  }
+},
+{
+  "model": "taggit.taggeditem",
+  "pk": 1,
+  "fields": {
+    "tag": 1,
+    "content_type": [
+      "wagtailimages",
+      "image"
+    ],
+    "object_id": 2
   }
 },
 {
@@ -319,6 +263,17 @@
   }
 },
 {
+  "model": "wagtailcore.pagesubscription",
+  "pk": 4,
+  "fields": {
+    "user": [
+      "lm"
+    ],
+    "page": 6,
+    "comment_notifications": true
+  }
+},
+{
   "model": "wagtailcore.pagelogentry",
   "pk": 1,
   "fields": {
@@ -473,6 +428,138 @@
   }
 },
 {
+  "model": "wagtailcore.pagelogentry",
+  "pk": 8,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Segunda entrada",
+    "action": "wagtail.create",
+    "data_json": "\"\"",
+    "timestamp": "2022-01-12T07:53:47.767Z",
+    "uuid": "bf58a021-d418-44f3-964f-d04607ffe842",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": null
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 9,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Segunda entrada",
+    "action": "wagtail.publish",
+    "data_json": "null",
+    "timestamp": "2022-01-12T07:53:47.843Z",
+    "uuid": "bf58a021-d418-44f3-964f-d04607ffe842",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 6,
+    "revision": 5
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 10,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Primer post",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2022-01-12T08:24:49.663Z",
+    "uuid": "ac7e8a48-316c-4d29-980b-5d5cf0946fd0",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 11,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Primer post",
+    "action": "wagtail.publish",
+    "data_json": "null",
+    "timestamp": "2022-01-12T08:24:49.710Z",
+    "uuid": "ac7e8a48-316c-4d29-980b-5d5cf0946fd0",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 6
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 12,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Primer post",
+    "action": "wagtail.edit",
+    "data_json": "\"\"",
+    "timestamp": "2022-01-12T08:25:30.331Z",
+    "uuid": "b581baca-e3ef-44ed-b189-53e074e88797",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 7
+  }
+},
+{
+  "model": "wagtailcore.pagelogentry",
+  "pk": 13,
+  "fields": {
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "label": "Primer post",
+    "action": "wagtail.publish",
+    "data_json": "null",
+    "timestamp": "2022-01-12T08:25:30.381Z",
+    "uuid": "b581baca-e3ef-44ed-b189-53e074e88797",
+    "user": [
+      "lm"
+    ],
+    "content_changed": true,
+    "deleted": false,
+    "page": 5,
+    "revision": 7
+  }
+},
+{
   "model": "wagtailcore.groupapprovaltask",
   "pk": 1,
   "fields": {
@@ -536,6 +623,48 @@
       "lm"
     ],
     "content_json": "{\"pk\": 5, \"path\": \"0001000100010001\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"679f3812-792b-4b4d-ac13-0cef86294956\", \"locale\": 1, \"title\": \"Primer post\", \"draft_title\": \"Primer post\", \"slug\": \"primer-post\", \"content_type\": 46, \"live\": false, \"has_unpublished_changes\": true, \"url_path\": \"/home/blog-de-clase/primer-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": \"2022-01-11T09:54:49.078Z\", \"live_revision\": null, \"alias_of\": null, \"date\": \"2022-01-11\", \"intro\": \"Introducci\\u00f3n a wagtail\", \"body\": \"<h3 data-block-key=\\\"vs3uc\\\">Wagtail es un CMS</h3><p data-block-key=\\\"1rlj0\\\">Caracter\\u00edsticas ...</p><p data-block-key=\\\"bbc3b\\\"></p><embed alt=\\\"logoies\\\" embedtype=\\\"image\\\" format=\\\"right\\\" id=\\\"1\\\"/><p data-block-key=\\\"1jeaa\\\"></p><p data-block-key=\\\"c7mvv\\\"></p><p data-block-key=\\\"93ede\\\"></p><p data-block-key=\\\"djokl\\\"></p><p data-block-key=\\\"brtn\\\"></p>\", \"wagtail_admin_comments\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 5,
+  "fields": {
+    "page": 6,
+    "submitted_for_moderation": false,
+    "created_at": "2022-01-12T07:53:47.781Z",
+    "user": [
+      "lm"
+    ],
+    "content_json": "{\"pk\": 6, \"path\": \"0001000100010002\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"bf66de83-752c-454e-956f-a9fa0e0b15ec\", \"locale\": 1, \"title\": \"Segunda entrada\", \"draft_title\": \"Segunda entrada\", \"slug\": \"segunda-entrada\", \"content_type\": 46, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog-de-clase/segunda-entrada/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": null, \"last_published_at\": null, \"latest_revision_created_at\": null, \"live_revision\": null, \"alias_of\": null, \"date\": \"2022-01-12\", \"intro\": \"Segunda entrada del blog\", \"body\": \"<p data-block-key=\\\"thn97\\\">Bla bla bla</p><p data-block-key=\\\"carj8\\\"></p><p data-block-key=\\\"3084h\\\"></p><p data-block-key=\\\"61hnh\\\"></p><p data-block-key=\\\"7n34d\\\"></p>\", \"wagtail_admin_comments\": []}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 6,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2022-01-12T08:24:49.648Z",
+    "user": [
+      "lm"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"0001000100010001\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"679f3812-792b-4b4d-ac13-0cef86294956\", \"locale\": 1, \"title\": \"Primer post\", \"draft_title\": \"Primer post\", \"slug\": \"primer-post\", \"content_type\": 46, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog-de-clase/primer-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2022-01-11T09:54:52.896Z\", \"last_published_at\": \"2022-01-11T09:54:52.896Z\", \"latest_revision_created_at\": \"2022-01-11T09:54:52.866Z\", \"live_revision\": 4, \"alias_of\": null, \"date\": \"2022-01-11\", \"intro\": \"Introducci\\u00f3n a wagtail\", \"body\": \"<h3 data-block-key=\\\"vs3uc\\\">Wagtail es un CMS</h3><p data-block-key=\\\"1rlj0\\\">Caracter\\u00edsticas ...</p><p data-block-key=\\\"bbc3b\\\"></p><embed alt=\\\"logoies\\\" embedtype=\\\"image\\\" format=\\\"right\\\" id=\\\"1\\\"/><p data-block-key=\\\"1jeaa\\\"></p><p data-block-key=\\\"c7mvv\\\"></p><p data-block-key=\\\"93ede\\\"></p><p data-block-key=\\\"djokl\\\"></p><p data-block-key=\\\"brtn\\\"></p>\", \"wagtail_admin_comments\": [], \"gallery_images\": [{\"pk\": null, \"sort_order\": 0, \"page\": 5, \"image\": 2, \"caption\": \"\"}, {\"pk\": null, \"sort_order\": 1, \"page\": 5, \"image\": 1, \"caption\": \"Logo cpilosenlaces\"}]}",
+    "approved_go_live_at": null
+  }
+},
+{
+  "model": "wagtailcore.pagerevision",
+  "pk": 7,
+  "fields": {
+    "page": 5,
+    "submitted_for_moderation": false,
+    "created_at": "2022-01-12T08:25:30.310Z",
+    "user": [
+      "lm"
+    ],
+    "content_json": "{\"pk\": 5, \"path\": \"0001000100010001\", \"depth\": 4, \"numchild\": 0, \"translation_key\": \"679f3812-792b-4b4d-ac13-0cef86294956\", \"locale\": 1, \"title\": \"Primer post\", \"draft_title\": \"Primer post\", \"slug\": \"primer-post\", \"content_type\": 46, \"live\": true, \"has_unpublished_changes\": false, \"url_path\": \"/home/blog-de-clase/primer-post/\", \"owner\": 1, \"seo_title\": \"\", \"show_in_menus\": false, \"search_description\": \"\", \"go_live_at\": null, \"expire_at\": null, \"expired\": false, \"locked\": false, \"locked_at\": null, \"locked_by\": null, \"first_published_at\": \"2022-01-11T09:54:52.896Z\", \"last_published_at\": \"2022-01-12T08:24:49.684Z\", \"latest_revision_created_at\": \"2022-01-12T08:24:49.648Z\", \"live_revision\": 6, \"alias_of\": null, \"date\": \"2022-01-11\", \"intro\": \"Introducci\\u00f3n a wagtail\", \"body\": \"<h3 data-block-key=\\\"vs3uc\\\">Wagtail es un CMS</h3><p data-block-key=\\\"1rlj0\\\">Caracter\\u00edsticas ...</p><p data-block-key=\\\"bbc3b\\\"></p><p data-block-key=\\\"ufjkz\\\"></p><p data-block-key=\\\"1jeaa\\\"></p><p data-block-key=\\\"c7mvv\\\"></p><p data-block-key=\\\"93ede\\\"></p><p data-block-key=\\\"djokl\\\"></p><p data-block-key=\\\"brtn\\\"></p>\", \"wagtail_admin_comments\": [], \"gallery_images\": [{\"pk\": 1, \"sort_order\": 0, \"page\": 5, \"image\": 2, \"caption\": \"\"}, {\"pk\": 2, \"sort_order\": 1, \"page\": 5, \"image\": 1, \"caption\": \"Logo cpilosenlaces\"}]}",
     "approved_go_live_at": null
   }
 },
@@ -617,7 +746,7 @@
   "fields": {
     "path": "000100010001",
     "depth": 3,
-    "numchild": 1,
+    "numchild": 2,
     "translation_key": "3814cc23-fc46-44a8-b046-569528cd05e1",
     "locale": 1,
     "title": "Blog de clase",
@@ -681,9 +810,47 @@
     "locked_at": null,
     "locked_by": null,
     "first_published_at": "2022-01-11T09:54:52.896Z",
-    "last_published_at": "2022-01-11T09:54:52.896Z",
-    "latest_revision_created_at": "2022-01-11T09:54:52.866Z",
-    "live_revision": 4,
+    "last_published_at": "2022-01-12T08:25:30.351Z",
+    "latest_revision_created_at": "2022-01-12T08:25:30.310Z",
+    "live_revision": 7,
+    "alias_of": null
+  }
+},
+{
+  "model": "wagtailcore.page",
+  "pk": 6,
+  "fields": {
+    "path": "0001000100010002",
+    "depth": 4,
+    "numchild": 0,
+    "translation_key": "bf66de83-752c-454e-956f-a9fa0e0b15ec",
+    "locale": 1,
+    "title": "Segunda entrada",
+    "draft_title": "Segunda entrada",
+    "slug": "segunda-entrada",
+    "content_type": [
+      "blog",
+      "blogpage"
+    ],
+    "live": true,
+    "has_unpublished_changes": false,
+    "url_path": "/home/blog-de-clase/segunda-entrada/",
+    "owner": [
+      "lm"
+    ],
+    "seo_title": "",
+    "show_in_menus": false,
+    "search_description": "",
+    "go_live_at": null,
+    "expire_at": null,
+    "expired": false,
+    "locked": false,
+    "locked_at": null,
+    "locked_by": null,
+    "first_published_at": "2022-01-12T07:53:47.815Z",
+    "last_published_at": "2022-01-12T07:53:47.815Z",
+    "latest_revision_created_at": "2022-01-12T07:53:47.781Z",
+    "live_revision": 5,
     "alias_of": null
   }
 },
@@ -709,6 +876,27 @@
   }
 },
 {
+  "model": "wagtailimages.image",
+  "pk": 2,
+  "fields": {
+    "collection": 1,
+    "title": "enlaces",
+    "file": "original_images/enlaces.gif",
+    "width": 259,
+    "height": 369,
+    "created_at": "2022-01-12T08:23:28.676Z",
+    "uploaded_by_user": [
+      "lm"
+    ],
+    "focal_point_x": null,
+    "focal_point_y": null,
+    "focal_point_width": null,
+    "focal_point_height": null,
+    "file_size": 66869,
+    "file_hash": "a9d1d25af55eeba1458cfd2d0ec740295aff1fc3"
+  }
+},
+{
   "model": "wagtailusers.userprofile",
   "pk": 1,
   "fields": {
@@ -730,7 +918,16 @@
   "fields": {
     "date": "2022-01-11",
     "intro": "Introducción a wagtail",
-    "body": "<h3 data-block-key=\"vs3uc\">Wagtail es un CMS</h3><p data-block-key=\"1rlj0\">Características ...</p><p data-block-key=\"bbc3b\"></p><embed alt=\"logoies\" embedtype=\"image\" format=\"right\" id=\"1\"/><p data-block-key=\"1jeaa\"></p><p data-block-key=\"c7mvv\"></p><p data-block-key=\"93ede\"></p><p data-block-key=\"djokl\"></p><p data-block-key=\"brtn\"></p>"
+    "body": "<h3 data-block-key=\"vs3uc\">Wagtail es un CMS</h3><p data-block-key=\"1rlj0\">Características ...</p><p data-block-key=\"bbc3b\"></p><p data-block-key=\"ufjkz\"></p><p data-block-key=\"1jeaa\"></p><p data-block-key=\"c7mvv\"></p><p data-block-key=\"93ede\"></p><p data-block-key=\"djokl\"></p><p data-block-key=\"brtn\"></p>"
+  }
+},
+{
+  "model": "blog.blogpage",
+  "pk": 6,
+  "fields": {
+    "date": "2022-01-12",
+    "intro": "Segunda entrada del blog",
+    "body": "<p data-block-key=\"thn97\">Bla bla bla</p><p data-block-key=\"carj8\"></p><p data-block-key=\"3084h\"></p><p data-block-key=\"61hnh\"></p><p data-block-key=\"7n34d\"></p>"
   }
 },
 {
