@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags blog_tags %}
 
 {% block body_class %}template-blogpage{% endblock %}
 
@@ -47,4 +47,7 @@
     {% endif %}
     <p><a href="{{ page.get_parent.url }}">Volver al blog</a></p>
 </div>
+
+{% categories_list %}
+
 {% endblock %}
