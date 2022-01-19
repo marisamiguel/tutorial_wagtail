@@ -27,6 +27,7 @@ INSTALLED_APPS = [
     'home',
     'search',
     'blog',
+    'pelis',
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'wagtail.contrib.modeladmin',
+    'wagtail.contrib.styleguide',
 ]
 
 MIDDLEWARE = [
