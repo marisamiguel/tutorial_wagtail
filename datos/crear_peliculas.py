@@ -8,13 +8,18 @@ python manage.py shell < datos/crear_peliculas.py
 
 from pelis.models import Pelicula
 import json
+import os
 
 # borrar pelis
 for p in Pelicula.objects.all():
     p.delete()
 
 #lista de películas del json
-pelis = json.load(open("datos/datos_pelis.json"))
+if os.path.exists("datos/datos_pelis.json"):
+    pelis = json.load(open("datos/datos_pelis.json"))
+else:
+    pelis = json.load(open("datos_pelis.json"))
+
 
 '''
 {
