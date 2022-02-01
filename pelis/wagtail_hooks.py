@@ -1,7 +1,7 @@
 from wagtail.contrib.modeladmin.options import (
     ModelAdmin, ModelAdminGroup, modeladmin_register)
 
-from pelis.models import Pelicula
+from pelis.models import Pelicula, Genre
 
 '''
 N.B. To see what icons are available for use in Wagtail menus and StreamField block types,
@@ -20,15 +20,33 @@ font-awesome icon set is available to you. Options are at http://fontawesome.io/
 '''
 
 
+class GenerosAdmin(ModelAdmin):
+    # These stub classes allow us to put various models into the custom "Wagtail Bakery" menu item
+    # rather than under the default Snippets section.
+    model = Genre
+    menu_label = 'Géneros'
+    search_fields = ('nombre',)
+    menu_icon = 'fa-tags'
+
 class PelisAdmin(ModelAdmin):
     # These stub classes allow us to put various models into the custom "Wagtail Bakery" menu item
     # rather than under the default Snippets section.
     model = Pelicula
     search_fields = ('title', 'cast', 'year')
-    menu_icon = 'fa-suitcase'  # change as required
+    menu_icon = 'fa-film'  # change as required
     menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
+
+
+
+class PelisAdminGroup(ModelAdminGroup):
+    # These stub classes allow us to put various models into the custom "Wagtail Bakery" menu item
+    # rather than under the default Snippets section.
+    menu_label = 'Películas'
+    menu_icon = 'fa-film'  # change as required
+    menu_order = 200  # will put in 3rd place (000 being 1st, 100 2nd)
+    items = (GenerosAdmin, PelisAdmin, )
 
 
 # When using a ModelAdminGroup class to group several ModelAdmin classes together,
 # you only need to register the ModelAdminGroup class with Wagtail:
-modeladmin_register(PelisAdmin)
+modeladmin_register(PelisAdminGroup)
