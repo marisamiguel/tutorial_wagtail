@@ -66,19 +66,10 @@ class PelisIndexPage(Page):
         FieldPanel('introduccion', classname="full")
     ]
 
-    def paginate(self, request, *args):
+    def paginate(self, request, peliculas, *args):
         page = request.GET.get('page')
-        decada = request.GET.get('decada')
-        self.qs = '' 
-        if decada:
-            peliculas = Pelicula.objects.filter(year__gte=1990, 
-                year__lt=2000)
-            self.qs = f'decada={decada}'
-            
-        else: 
-            peliculas = Pelicula.objects.all()
         
-        paginator = Paginator(peliculas, 5)
+        paginator = Paginator(peliculas, 15)
         try:
             pages = paginator.page(page)
         except PageNotAnInteger:
@@ -90,9 +81,17 @@ class PelisIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
-        
-        context['peliculas'] = self.paginate(request)
-        context['qs'] = self.qs
+        decada = request.GET.get('decada')
+        qs = ''
+        if decada:
+            peliculas = Pelicula.objects.filter(year__gte=1990, 
+                year__lt=2000)
+            qs = f'decada={decada}'
+        else:
+            peliculas = Pelicula.objects.all()
+
+        context['peliculas'] = self.paginate(request, peliculas)
+        context['qs'] = qs
         
         return context
 
