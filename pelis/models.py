@@ -69,9 +69,12 @@ class PelisIndexPage(Page):
     def paginate(self, request, *args):
         page = request.GET.get('page')
         decada = request.GET.get('decada')
+        self.qs = '' 
         if decada:
             peliculas = Pelicula.objects.filter(year__gte=1990, 
                 year__lt=2000)
+            self.qs = f'decada={decada}'
+            
         else: 
             peliculas = Pelicula.objects.all()
         
@@ -87,7 +90,9 @@ class PelisIndexPage(Page):
     def get_context(self, request):
         # Update context to include only published posts, ordered by reverse-chron
         context = super().get_context(request)
+        
         context['peliculas'] = self.paginate(request)
+        context['qs'] = self.qs
         
         return context
 
