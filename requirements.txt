@@ -19,7 +19,7 @@ et-xmlfile==1.1.0
 executing==0.8.2
 html5lib==1.1
 idna==3.3
-ipython==8.0.0
+ipython==8.10.0
 jedi==0.18.1
 l18n==2021.3
 lxml==4.7.1
